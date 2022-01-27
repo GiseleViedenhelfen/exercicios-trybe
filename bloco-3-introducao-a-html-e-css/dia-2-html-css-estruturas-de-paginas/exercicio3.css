@@ -1,0 +1,20 @@
+body{
+    font-size: 16px;
+}
+h1{
+    font-family: sans-serif;
+    color: orange;
+    width: 65px;
+}
+p{
+    font-weight: 600;
+    font-size: 3em;
+}
+.blue{
+    background-color: blue;
+  }
+#amarelo{
+    color: yellow;
+}
+#vermelho{ color: red;}
+#marrom{color: brown;}
