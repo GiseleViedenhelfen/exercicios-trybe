@@ -1,23 +1,23 @@
-let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-    recorrente: 'Sim',
-    info2: {
-        personagem: 'Tio Patinhas',
-        origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
-        nota:'O último MacPatinhas',
-        recorrente: 'Não'
-    }
-  };
- 
-
-      console.log(`${info.personagem} e ${info.info2.personagem}`)
-      console.log(`${info.origem} e ${info.info2.origem}`)
-      console.log(`${info.nota} e ${info.info2.nota}`)
-      if(info.recorrente ==="Sim" && info.info2.recorrente ==='Sim'){
-          console.log(`Ambos recorrentes.`)
-      }
-      else{
-          console.log(`Pelo menos um deles não é recorrente.`)
-      }
+function descobrirNumeroQueMaisRepete(numeros){
+   let contador= 0;
+   let contadorAtual =0;
+   let numeroMaisRepete;
+    for(let n=0; n < numeros.length; n++){
+     for(let v=0; v<numeros.length; v++){
+         if(numeros[n]== numeros[v]){ 
+            contadorAtual +=1
+             console.log(`numero repetiu`)
+           }
+         }
+         if(contadorAtual > contador){
+            contador = contadorAtual
+            numeroMaisRepete = numeros[n]
+        }
+        contadorAtual = 0
+       
+     }
+     return numeroMaisRepete    
+}
+let arrayDeNumeros =[2, 3, 2, 5, 8, 2, 3];
+descobrirNumeroQueMaisRepete(arrayDeNumeros);
+console.log(descobrirNumeroQueMaisRepete(arrayDeNumeros))

@@ -1,13 +1,14 @@
-let leitor = {
-    nome: 'Julia',
-    sobrenome: 'Pessoa',
-    idade: 21,
-    livrosFavoritos: [
-      {
-        titulo: 'O Pior Dia de Todos',
-        autor: 'Daniela Kopsch',
-        editora: 'Tordesilhas',
-      },
-    ],
-  };
-  console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama "${leitor.livrosFavoritos[0].titulo}".`)
+function somaNumeros(numero){
+    soma =0
+    for(i=1;i <= numero; i+=1){
+        if(i==0){
+            soma = i
+        }
+        else{
+            soma +=i           
+        }
+    }
+    return(soma) 
+}
+somaNumeros(5);
+console.log(somaNumeros(5))

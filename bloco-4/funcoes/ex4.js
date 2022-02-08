@@ -1,9 +1,10 @@
-let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-    recorrente: 'Sim'
-  };
-  for(let valores in info){
-      console.log(info[valores])
-  }
+function maiorNome(nome){
+    let maiorNome =''
+    for(let index in nome){
+        if(maiorNome.length < nome[index].length)
+        maiorNome =nome[index]
+    }
+    console.log(maiorNome)
+}
+let listaDeNomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']
+maiorNome(listaDeNomes)
