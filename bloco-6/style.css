@@ -1,0 +1,14 @@
+.forms{
+    display: block;
+    margin: 10px;
+    margin-left: 20px;
+}
+main{
+    border: 1px solid black;
+}
+button{
+    display: inline-block;
+    margin-top: 10px;
+    width: 140px;
+    height: 20px;
+}
