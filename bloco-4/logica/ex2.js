@@ -5,8 +5,6 @@ depois troque por outras para verificar se
 seu algoritmo está funcionando corretamente.*/
 let word = 'amor';
 
-
-
 for(let index=word.length; index>=1;index-=1){
         console.log(word[index-1])
 }

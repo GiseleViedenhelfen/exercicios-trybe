@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script >
+    //pegar o elemento pai
+    //tagName é sempre lista, tem que colocar a posição no array!
+let acharBody = document.getElementsByTagName('body')[0];
+// criar a tag que será do elemento 
+let criarH1 = document.createElement('h1');
+// custumizar
+criarH1.innerText= "Exercício 5.2 - JavaScript DOM "
+criarH1.className = 'title'
+// colocar no html
+acharBody.appendChild(criarH1)
+// criar a tag que será do elemento 
+let tagMain = document.createElement('main');
+// custumizar
+tagMain.className =" main-content "
+tagMain.style.backgroundColor= 'green'
+// colocar no html
+acharBody.appendChild(tagMain)
+//cria tagSection filha da mainContent
+let tagSection = document.createElement('section');
+tagSection.className = "center-content";
+
+tagMain.appendChild(tagSection)
+// cria tagP filha da tagSection
+let tagP = document.createElement('p');
+tagP.innerText = "texto da tag P criada."
+tagMain.appendChild(tagP)
+// cria segunda tagSection filha da mainContent
+let segundaSection = document.createElement('section');
+segundaSection.className = "left-content"
+tagMain.appendChild(segundaSection)
+//cria terceira section filha da mainContent
+let terceiraSection = document.createElement('section');
+terceiraSection.className = "right-content";
+terceiraSection.style.marginRight='auto'
+tagMain.appendChild(terceiraSection);
+//cria imagem
+let tagIMG = document.createElement('img');
+tagIMG.src = "https://picsum.photos/200"
+tagIMG.className= 'small-image';
+segundaSection.appendChild(tagIMG)
+// exercicio de fazer for
+//Adicione uma lista não ordenada com os valores 
+//de 1 a 10 por extenso, ou seja, um , dois , três , ... 
+//como valores da lista. 
+//Essa lista deve ser filha do section criado no passo 6;
+let listaNaoOrdenada = document.createElement('ul')
+terceiraSection.appendChild(listaNaoOrdenada)
+//fazendo o for para adicionar os itens da lista
+let listaDeNumeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito','nove','dez']
+for(index=0; index<listaDeNumeros.length;index+=1){    
+let numero = listaDeNumeros[index]
+let numeroDaLista =document.createElement('li')
+numeroDaLista.innerText=numero
+listaNaoOrdenada.appendChild(numeroDaLista)
+}
+// adicionar 3 tags h3 sendo filhas da main
+let tagPrimeiraH3 = document.createElement('h3')
+tagMain.appendChild(tagPrimeiraH3)
+tagPrimeiraH3.className= 'description'
+let tagSegundaH3 = document.createElement('h3')
+tagMain.appendChild(tagSegundaH3)
+tagSegundaH3.className ='description'
+let tagTerceiraH3 = document.createElement('h3')
+tagMain.appendChild(tagTerceiraH3)
+tagTerceiraH3.className='description'
+//remover a tag segundaSection
+tagMain.removeChild(segundaSection)
+//remover 2 ultimos li da lista
+
+listaNaoOrdenada.lastElementChild.remove()
+listaNaoOrdenada.lastElementChild.remove()
+
+    </script>
+  </body>
+</html>
