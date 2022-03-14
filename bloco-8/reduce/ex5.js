@@ -5,10 +5,10 @@ const names = [
 ];
 
 function containsA(array) {
-  return array.reduce((contador, valor)=> 
-  contador += valor.split('').reduce((contador, valor) =>{
-    if(valor.toLowerCase() ==='a') return contador += 1
-    return contador
+  return array.reduce((contador, valor) => 
+  contador + valor.split('').reduce((contador, valor) => {
+    if(valor.toLowerCase() ==='a') contador += 1
+    return contador;
   },0),0)
 }
 
